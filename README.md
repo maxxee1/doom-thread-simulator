@@ -1,3 +1,16 @@
+
+
+## Estructura del Proyecto
+
+```text
+/
+├── src/               # Código fuente (main.c, sim.c, parser.c, etc.)
+├── configs/           # Archivos de configuración y escenarios (.txt)
+├── Makefile           # Script de compilación
+└── doom_sim           # Ejecutable (generado tras compilar)
+```
+
+
 ## Compilación
 
 Desde la raíz del proyecto, ejecutar:
@@ -19,15 +32,15 @@ Esto compila todos los archivos del directorio `src/` y genera el ejecutable:
 Ejecutar el programa indicando el archivo de configuración:
 
 ```bash
-./doom_sim config_multihero.txt
+./doom_sim configs/config_multihero.txt
 ```
 
 También se pueden probar otros escenarios incluidos:
 
 ```bash
-./doom_sim config_fin_meta.txt
-./doom_sim config_heroe_muere_multi.txt
-./doom_sim config_stress.txt
+./doom_sim configs/config_fin_meta.txt
+./doom_sim configs/config_heroe_muere_multi.txt
+./doom_sim configs/config_stress.txt
 ```
 
 ---
@@ -110,7 +123,7 @@ Puedes agregar al `Makefile` la siguiente regla:
 
 ```makefile
 run:
-	./doom_sim config_stress.txt
+	./doom_sim configs/config_stress.txt
 ```
 
 Y ejecutarla con:
